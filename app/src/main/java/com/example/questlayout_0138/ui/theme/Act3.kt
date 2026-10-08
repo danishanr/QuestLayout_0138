@@ -1,6 +1,7 @@
 package com.example.questlayout_0138.ui.theme
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,15 +17,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.R
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.questlayout_0138.R
 
 @Composable
 fun ActivitasPertama(modifier: Modifier){
@@ -48,7 +50,7 @@ fun ActivitasPertama(modifier: Modifier){
                 .fillMaxWidth(fraction = 1f)
                 .padding(all = 12.dp),
             colors = CardDefaults.cardColors(
-                containerColor = colorResource(R.color.card_0_ng)
+                containerColor = colorResource(R.color.card_0_bg)
             )
         ) {
             Row() {
@@ -61,7 +63,7 @@ fun ActivitasPertama(modifier: Modifier){
                 Spacer(modifier = Modifier.width(30.dp))
                 Column() {
                     Text(
-                        stringResource(R.string.name),
+                        stringResource(R.string.app_name),
                         fontSize = 30.sp,
                         fontFamily = FontFamily.Cursive,
                         color = Color.White,
@@ -76,6 +78,8 @@ fun ActivitasPertama(modifier: Modifier){
                     )
                 }
             }
+            Box(
+            )
 
         }
     }
